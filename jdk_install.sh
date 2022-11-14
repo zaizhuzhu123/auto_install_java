@@ -2,6 +2,8 @@
 JAVA_HOME=''
 jdkDir=/usr/local/jdk/
 
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.tar.gz"
+
 #校验解压JDK的文件夹
 if [ -e $jdkDir ]
 then
@@ -14,7 +16,7 @@ if [ -f $1 ]
 then
 	mkdir $jdkDir
 	echo "开始解压..."
-	tar -zxvf $1 -C $jdkDir
+	tar -zxvf jdk-8u141-linux-x64.tar.gz -C $jdkDir
 	for file in $jdkDir*
 	do
 		if [ -d $file ]

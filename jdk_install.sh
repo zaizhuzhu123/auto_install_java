@@ -7,13 +7,12 @@ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2F
 #校验解压JDK的文件夹
 if [ -e $jdkDir ]
 then
-	echo "$jdkDir文件夹已存在,执行被迫终止!"
-	exit
+	echo "$jdkDir文件夹已存在,覆盖执行!"
+else
+	mkdir -p $jdkDir
 fi
 
 echo "检查压缩包是否存在..."
-if [ -f $1 ]
-then
 	mkdir $jdkDir
 	echo "开始解压..."
 	tar -zxvf jdk-8u141-linux-x64.tar.gz -C $jdkDir
@@ -26,10 +25,6 @@ then
 	done
 	echo "JAVA_HOME=$JAVA_HOME"
 
-else
-	echo 文件不存在:$1
-	exit
-fi
 
 #修改环境变量
 

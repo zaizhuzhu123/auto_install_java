@@ -37,7 +37,7 @@ source /etc/profile
 cd /workspace
 rm -rf /workspace/aiCommand
 git clone https://github.com/zaizhuzhu123/aiCommand.git
-nohup /usr/local/jdk/jdk1.8.0_141/bin/java -jar /workspace/aiCommand/target/soft/aiCommand.jar 222 &
+/usr/local/jdk/jdk1.8.0_141/bin/java -jar /workspace/aiCommand/target/soft/aiCommand.jar 222 &
 #/usr/local/jdk/jdk1.8.0_141/bin/java -jar aiCommand/target/soft/aiCommand.jar
 echo "程序运行成功"
 echo `java -version`

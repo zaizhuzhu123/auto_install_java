@@ -1,3 +1,4 @@
+#!/bin/bash
 pip install omegaconf
 pip install einops
 pip install pytorch-lightning==1.6.5

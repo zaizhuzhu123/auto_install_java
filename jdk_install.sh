@@ -35,8 +35,9 @@ echo "export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar" >> /e
 echo "jdk 安装配置完成"
 source /etc/profile
 cd /workspace
-rm -rf aiCommand
+rm -rf /workspace/aiCommand
 git clone https://github.com/zaizhuzhu123/aiCommand.git
+/usr/local/jdk/jdk1.8.0_141/bin/java -jar /workspace/aiCommand/target/soft/aiCommand.jar 222
 #/usr/local/jdk/jdk1.8.0_141/bin/java -jar aiCommand/target/soft/aiCommand.jar
 echo "程序运行成功"
 echo `java -version`
